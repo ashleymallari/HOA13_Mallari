@@ -1,0 +1,8 @@
+- name: installation Message Queue
+  apt:
+    name: rabbitmq-server
+    state: latest
+
+- name: permission to configure, write, and read access for the openstack user
+  shell:
+    rabbitmqctl set_permissions openstack ".*" ".*" ".*"

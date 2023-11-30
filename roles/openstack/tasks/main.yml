@@ -1,0 +1,9 @@
+- name: Nova-compute Installation
+  apt:
+    name: nova-compute
+    state: latest
+
+- name: Python3-openstack Client Installation
+  apt:
+    name: python3-openstackclient
+    state: latest
